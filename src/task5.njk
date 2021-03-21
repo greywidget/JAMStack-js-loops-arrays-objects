@@ -1,0 +1,55 @@
+---
+subtitle: Recipe with a Method
+layout: base.njk
+jsfile: task5.js
+eleventyNavigation:
+  key: Task5
+  order: 6
+---
+    
+<div class="col-10 text-start">
+    <h2>{{ subtitle }}</h2>
+    <p>Give your recipe <strong>Object</strong> a <strong>Method</strong>
+      called <em>letsCook</em>. Have it say: 
+      <span class="mark">"I'm hungry! Let's cook..."</span>
+      with the name of your recipe title.</p>
+    <p>Call the new <strong>Method</strong></p>
+    <h2 class="pt-3">Javascript</h2>
+    <div class="bg-white">
+    <pre><code>function listRecipe() {
+  var recipe = {
+      title: 'Easy No Knead Bread',
+      serves: 4,
+      ingredients: [
+          "450g all-purpose flour",
+          "2tsp active dry yeast",
+          "1½tsp sea salt",
+          "350ml warm water (40°C)"
+      ],
+      directions: [
+          "Combine the flour, yeast and salt in a large bowl and stir to combine",
+          "Add the water and mix until the dough forms a ball",
+          "Cover the bowl with plastic wrap and a damp tea towel",
+          "Let the dough sit covered at room temperature for 18-24 hours",
+          "Place a 2.4L lidded oven dish in the oven and pre-heat to 220°C",
+          "While oven is pre-heating, transfer dough to a floured surface",
+          "Form the dough into a rough ball. It is a wet mix and will be floppy",
+          "Carefully remove the oven dish and sprinkle a little flour on the bottom",
+          "Gently put the dough ball into the oven dish so it is evenly distributed",
+          "Cover and cook for 30 minutes",
+          "Remove the lid and cook for a further 15 minutes or until golden brown"
+      ],
+      letsCook: function() {
+          return `I'm hungry! Let's cook ${this.title}`
+      }
+  };
+
+  var outStr = `&lt;p class="text-danger"&gt;${recipe.letsCook()}&lt;/p&gt;`
+  document.getElementById('js-output').innerHTML = outStr;
+}</code></pre>
+</div>
+    <button type="button" class="btn btn-secondary text-warning" onclick="whatsCooking()">Run Javascript</button>
+    <h2 class="pt-3">Output</h2>
+    <div id="js-output">
+    </div>
+</div>
