@@ -1,0 +1,36 @@
+---
+subtitle: Arrays
+layout: base.njk
+jsfile: task2.js
+eleventyNavigation:
+  key: Task2
+  order: 3
+---
+    
+<div class="col-10 text-start">
+    <h2>{{ subtitle }}</h2>
+    <p>Create an <strong>Array</strong> of your favourite food.
+      Print some of them off.</p>
+    <h2 class="pt-3">Javascript</h2>
+    <div class="bg-white">
+    <pre><code>function chooseRandomFoodItem() {
+
+    var favouriteFoods = [
+        "Chicken Balti (HOT)",
+        "Roast Leg of Lamb",
+        "Pork Belly",
+        "Lamb Koftas",
+        "Pil Pil Prawns"
+    ];
+
+    var randomChoice = favouriteFoods[Math.floor(Math.random() 
+        * Math.floor(favouriteFoods.length))];
+
+    document.getElementById('js-output').innerHTML = randomChoice;
+}</code></pre>
+</div>
+    <button type="button" class="btn btn-secondary text-warning" onclick="chooseRandomFoodItem()">Run Javascript</button>
+    <h2 class="pt-3">Output</h2>
+    <div class="row" id="js-output">
+    </div>
+</div>
