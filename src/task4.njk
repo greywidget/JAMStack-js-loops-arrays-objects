@@ -1,0 +1,73 @@
+---
+subtitle: A Recipe Task
+layout: base.njk
+jsfile: task4.js
+eleventyNavigation:
+  key: Task4
+  order: 5
+---
+    
+<div class="col-10 text-start">
+    <h2>{{ subtitle }}</h2>
+    <p>Create an <strong>Object</strong> to hold information on your favourite
+      recipe. Then display the properties on the screen.</p>
+    <p><em>Bonus Points</em>: Create a <strong>Loop</strong> to list all of the 
+      Ingredients and Directions.</p>
+    <h2 class="pt-3">Javascript</h2>
+    <div class="bg-white">
+    <pre><code>function listRecipe() {
+
+  var recipe = {
+      title: 'Easy No Knead Bread',
+      serves: 4,
+      ingredients: [
+          "450g all-purpose flour",
+          "2tsp active dry yeast",
+          "1½tsp sea salt",
+          "350ml warm water (40°C)"
+      ],
+      directions: [
+          "Combine the flour, yeast and salt in a large bowl and stir to combine",
+          "Add the water and mix until the dough forms a ball",
+          "Cover the bowl with plastic wrap and a damp tea towel",
+          "Let the dough sit covered at room temperature for 18-24 hours",
+          "Place a 2.4L lidded oven dish in the oven and pre-heat to 220°C",
+          "While oven is pre-heating, transfer dough to a floured surface",
+          "Form the dough into a rough ball. It is a wet mix and will be floppy",
+          "Carefully remove the oven dish and sprinkle a little flour on the bottom",
+          "Gently put the dough ball into the oven dish so it is evenly distributed",
+          "Cover and cook for 30 minutes",
+          "Remove the lid and cook for a further 15 minutes or until golden brown"
+      ]
+  };
+
+  var outStr = `&lt;h3 class="text-danger"&gt;${recipe.title} (serves ${recipe.serves})&lt;/h3&gt;`;
+
+  outStr += `&lt;h4 class="pt-1"&gt;Ingredients&lt;/h4&gt;`;
+
+  for (i = 0; i &lt; recipe.ingredients.length; i++) {
+      outStr += "&lt;li&gt;"
+              + recipe.ingredients[i]
+              + "&lt;/li&gt;"
+  }
+
+  outStr += "&lt;/ul&gt;"
+
+  outStr += `&lt;h4 class="pt-3"&gt;Directions&lt;/h4&gt;`;
+
+  for (i = 0; i &lt; recipe.directions.length; i++) {
+      outStr += "&lt;li&gt;"
+              + recipe.directions[i]
+              + "&lt;/li&gt;"
+  }
+
+  outStr += "&lt;/ul&gt;"
+
+  document.getElementById('js-output').innerHTML = outStr;
+}</code></pre>
+</div>
+    <button type="button" class="btn btn-secondary text-warning" onclick="listRecipe()">Run Javascript</button>
+    <h2 class="pt-3">Output</h2>
+    <div id="js-output">
+    </div>
+</div>
