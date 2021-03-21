@@ -1,0 +1,17 @@
+{
+  "name": "js-loops-arrays-objects",
+  "version": "1.0.0",
+  "description": "This was a continuation of the work started last week on Functions and Control Flow",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "keywords": [],
+  "author": "craig@greywidget.co.uk",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-navigation": "^0.1.6"
+  }
+}
