@@ -1,3 +1,3 @@
-# JAMStack course week 11 - Functions and Control Flow (continued).
+# JAMStack course week 13 - Javascript Intro to Loops, Arrays and Objects.
 
-This was a continuation of the work started last week on Functions and Control Flow
+This week we continued to use **Loops**, but were also introduced to **Arrays** and **Objects**

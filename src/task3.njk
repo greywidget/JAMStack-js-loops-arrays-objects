@@ -1,0 +1,43 @@
+---
+subtitle: Arrays and Loops
+layout: base.njk
+jsfile: task3.js
+eleventyNavigation:
+  key: Task3
+  order: 4
+---
+    
+<div class="col-10 text-start">
+    <h2>{{ subtitle }}</h2>
+    <p>Create an <strong>Array</strong> of your favourite food.
+      Create a <strong>Loop</strong> to list them off.</p>
+    <h2 class="pt-3">Javascript</h2>
+    <div class="bg-white">
+    <pre><code>function listFoodItems() {
+
+  var favouriteFoods = [
+      "Chicken Balti (HOT)",
+      "Roast Leg of Lamb",
+      "Pork Belly",
+      "Lamb Koftas",
+      "Pil Pil Prawns"
+  ];
+
+  var outStr = "&lt;ul&gt;";
+
+  for (i = 0; i &lt; favouriteFoods.length; i++) {
+      outStr += "&lt;li&gt;"
+              + favouriteFoods[i]
+              + "&lt;/li&gt;"
+  }
+
+  outStr += "&lt;/ul&gt;"
+
+  document.getElementById('js-output').innerHTML = outStr;
+}</code></pre>
+</div>
+    <button type="button" class="btn btn-secondary text-warning" onclick="listFoodItems()">Run Javascript</button>
+    <h2 class="pt-3">Output</h2>
+    <div id="js-output">
+    </div>
+</div>
