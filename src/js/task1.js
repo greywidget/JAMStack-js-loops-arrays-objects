@@ -1,6 +1,6 @@
 // Print out all of the times tables from 1 to 12
 
-function times_table(from, to) {
+function timesTable(from, to) {
 
     var outStr = "";
     for (var i = from; i <= to; i++) {
